@@ -1,0 +1,6 @@
+interface:
+  display_name: "文档元数据隐私（Office / WPS / PDF）"
+  short_description: "交付前清理 Word、PPT、Excel、WPS、PDF 的作者及软件属性并复查"
+  default_prompt: "使用 $document-metadata-privacy 检查并清理待交付文档的元数据，保留内容并报告残留。"
+policy:
+  allow_implicit_invocation: true
