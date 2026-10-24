@@ -1,4 +1,4 @@
-# zwh_skill
+# document-metadata-privacy-skill
 some good skill in my studying
 
 个人学习与使用中的 Codex 技能集合。
