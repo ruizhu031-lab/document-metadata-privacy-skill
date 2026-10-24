@@ -7,7 +7,7 @@ some good skill in my studying
 
 | 技能 | 用途 | 支持范围 |
 | --- | --- | --- |
-| [document-metadata-privacy](document-metadata-privacy/README.md) | 在文档交付前清除不必要的作者、最后修改者、制作软件等属性，输出新副本并报告需要复查的信息 | Word、PowerPoint、Excel、WPS 保存的 DOCX/PPTX/XLSX，以及普通 PDF |
+| [document-metadata-privacy](document-metadata-privacy/README.md) | 交付前清理非必要属性，应用个人作者和时间默认值，备份验证后保留原文件名 | Word、PowerPoint、Excel、WPS 保存的 DOCX/PPTX/XLSX，以及普通 PDF |
 
 ### 文档元数据隐私清理
 
