@@ -1,7 +1,6 @@
 # document-metadata-privacy-skill
-some good skill in my studying
 
-个人学习与使用中的 Codex 技能集合。
+通过这个skill可以让codex生成的文档不会被察觉是AI生成的，从而保障你的文档隐私
 
 ## 技能列表
 
