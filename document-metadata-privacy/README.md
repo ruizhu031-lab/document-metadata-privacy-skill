@@ -43,19 +43,19 @@ OOXML 的核心和自定义属性默认全部清空；扩展属性删除 `Applic
 需要 Python 3.10+ 和 Git。克隆技能集合仓库后，将本技能子目录放入用户级技能目录；新版本 Codex 官方文档使用 `~/.agents/skills`，已有配置使用其他技能目录时可按实际环境调整。若目标技能目录已存在，请先备份并检查差异。
 
 ```bash
-git clone https://github.com/ruizhu031-lab/zwh_skill.git
+git clone https://github.com/ruizhu031-lab/document-metadata-privacy-skill.git
 mkdir -p ~/.agents/skills
-cp -R zwh_skill/document-metadata-privacy ~/.agents/skills/document-metadata-privacy
+cp -R document-metadata-privacy-skill/document-metadata-privacy ~/.agents/skills/document-metadata-privacy
 python -m pip install -r ~/.agents/skills/document-metadata-privacy/requirements.txt
 ```
 
 Windows PowerShell 示例：
 
 ```powershell
-git clone https://github.com/ruizhu031-lab/zwh_skill.git
+git clone https://github.com/ruizhu031-lab/document-metadata-privacy-skill.git
 $skillDir = Join-Path $HOME '.agents/skills'
 New-Item -ItemType Directory -Force -Path $skillDir | Out-Null
-Copy-Item -Recurse -LiteralPath './zwh_skill/document-metadata-privacy' -Destination $skillDir
+Copy-Item -Recurse -LiteralPath './document-metadata-privacy-skill/document-metadata-privacy' -Destination $skillDir
 python -m pip install -r "$HOME/.agents/skills/document-metadata-privacy/requirements.txt"
 ```
 
