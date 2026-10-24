@@ -2,7 +2,7 @@
 
 用于 Codex 的文档交付前元数据隐私清理技能，覆盖 **Word、PowerPoint、Excel、WPS 和 PDF**。
 
-A local, copy-only metadata privacy skill for Codex. Remove unnecessary author and producer properties from DOCX, PPTX, XLSX and ordinary PDF files, with review flags for remaining hidden information.
+A local metadata privacy skill for Codex. Clean unnecessary properties, apply user-specified author and time defaults, and preserve the delivery filename after backup and verification.
 
 ## 用途
 
@@ -11,6 +11,17 @@ A local, copy-only metadata privacy skill for Codex. Remove unnecessary author a
 技能默认在**最后一次保存或导出之后、交付链接之前**执行，并与 Word、演示文稿、表格和 PDF 制作技能配合。工具在本地运行，不上传被处理的文档。
 
 清除元数据不等于证明人工创作，也不保证匿名、无法识别 AI 或完全无痕。正文、版式、批注、附件、图片和文件结构仍可能包含来源信息。
+
+## 本仓库的个人默认值
+
+新生成或导出的文档默认作者为 `19436`，最后修改者为 `朱文好`；已有文档按当次请求限定范围处理，正文姓名、学号和邮箱空栏不受影响。
+
+- 按北京时间生成时间：修改日期为操作当日，修改时刻在16:00–22:00随机生成；创建时刻在14:00–20:00随机生成。分钟和秒均取1–59，避开整点及窗口端点。
+- 忽略日期，仅比较当日时分秒，两者绝对差至少3小时；完整时间戳同时须满足创建早于修改且至少相隔48小时。创建日期根据内容规模选择，课程报告通常提前3个日历日；不满足条件则重新生成。
+- 这些是用户指定的属性时间，不表示真实编辑历史；不据此修改文件系统时间、日志或云端记录。
+- 默认保留原文件名，不添加清理后缀。先在独立目录备份和暂存，检查内容及属性，并确认原件未被新的编辑改动后，再更新原交付路径。
+
+`sanitize.py clean` 本身仍会清空目标属性，并且拒绝覆盖已有输出。技能负责在清理后按格式原生方法写入上述默认值并验证；直接运行命令行脚本不会自动应用个人默认值。具体流程以 [SKILL.md](SKILL.md) 为准。
 
 ## 支持范围
 
